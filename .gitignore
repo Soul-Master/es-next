@@ -1,0 +1,16 @@
+# Root folders
+/.vs
+/.code
+/package-lock.json
+/dist
+
+# Common folders
+bin/
+obj/
+build/
+node_modules/
+
+# Bannded file names
+*.suo
+*.user
+package-lock.json

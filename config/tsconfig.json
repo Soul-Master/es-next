@@ -1,0 +1,23 @@
+{
+  // Target all ES features that are available on all latest browser versions.
+  "compileOnSave": true,
+  "compilerOptions": {
+    "composite": true,
+    // Current target supports Chrome 85, Safari 15.0, Node.js 16.0 or later.
+    "target": "es2022",
+    // Support top-level await
+    "module": "es2022",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "incremental": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "noImplicitOverride": true,
+    "useDefineForClassFields": true
+  }
+}

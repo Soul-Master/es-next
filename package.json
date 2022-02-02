@@ -1,0 +1,40 @@
+{
+  "name": "es-next",
+  "description": "High quality demo pages",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soul-Master/es-next"
+  },
+  "engines": {
+    "node": "~16.0.0",
+    "npm": ">=6.14.8"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "postinstall": "cd tools && tsc --project . && cd..",
+    "prestart": "npm i && npm run build",
+    "start": "npm run serve",
+    "clean": "git clean -dfx",
+    "build": "tsc --build",
+    "serve": "node ./tools/build/serve-script",
+    "serve:debug": "node --inspect ./tools/build/serve-script",
+    "publish": "node ./tools/build/publish-script"
+  },
+  "devDependencies": {
+    "@koa/cors": "~3.1.0",
+    "@rollup/plugin-node-resolve": "~13.1.3",
+    "@types/glob": "~7.2.0",
+    "@types/koa__cors": "~3.1.1",
+    "@types/cpx": "~1.5.2",
+    "@web/dev-server": "^0.1.29",
+    "cpx": "~1.5.0",
+    "glob": "~7.2.0",
+    "lit": "~2.1.2",
+    "rollup": "~2.67.0",
+    "rollup-plugin-terser": "~7.0.2",
+    "tslib": "~2.3.1",
+    "typescript": "4.6.0-beta"
+  },
+  "main": "src/index.ts",
+  "version": "1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+  "extends": "../config/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "build",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      // Only class features and errror constructor are available on Safari 15.0+
+      // Beware: static blocks in Classes doesn't support in Safari 15
+      // https://devblogs.microsoft.com/typescript/announcing-typescript-4-4-rc/#static-blocks
+      "es2021"
+    ],
+    "paths": {
+      "/worker/*": ["../worker/*"]
+    }
+  },
+  "include": [ "**/*.ts", "**/*.json" ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/",
+    "build",
+    "tsconfig.json"
+  ],
+  "references": [
+    { "path": "../worker" }
+  ]
+}

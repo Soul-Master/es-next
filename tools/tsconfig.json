@@ -1,0 +1,25 @@
+{
+  "extends": "../config/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "outDir": "build",
+    "lib": [
+      // Only class features and errror constructor are available on Safari 15.0+
+      // Beware: static blocks in Classes doesn't support in Safari 15
+      // https://devblogs.microsoft.com/typescript/announcing-typescript-4-4-rc/#static-blocks
+      "es2021"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.json"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/",
+    "build",
+    "tsconfig.json"
+  ]
+}

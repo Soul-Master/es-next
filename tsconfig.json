@@ -1,0 +1,8 @@
+{
+  "references": [
+    { "path": "worker" },
+    { "path": "src" },
+    { "path": "tools" }
+  ],
+  "files": []
+}
