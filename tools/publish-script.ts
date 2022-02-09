@@ -11,8 +11,9 @@ async function main() {
     fs.mkdirSync(config.localPublishFolder);
 
     cpx.copySync('src/**/*.html', 'dist');
-    cpx.copySync('worker/build/**/*.js', 'dist/worker');
     cpx.copySync('src/build/**/*.js', 'dist');
+    cpx.copySync('worker/build/**/*.js', 'dist/worker');
+    cpx.copySync('service-worker/build/**/*.js', 'dist/service-worker');
 }
 
 main();

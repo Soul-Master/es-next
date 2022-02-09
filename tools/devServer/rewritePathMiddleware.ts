@@ -4,12 +4,13 @@ import path from 'path';
 const nodePrefix = '/node_modules/';
 const srcPrefix = '/src/';
 const workerPrefix = '/worker/';
+const serviceWorkerPrefix = '/service-worker/';
 
 export default function (context: Koa.ParameterizedContext, next: Koa.Next) {
     let url = context.url;
     let ext = path.extname(url).toLowerCase();
 
-    if (!url.startsWith(nodePrefix) && !url.startsWith(workerPrefix)) {
+    if (!url.startsWith(nodePrefix) && !url.startsWith(workerPrefix) && !url.startsWith(serviceWorkerPrefix)) {
         // Rewrite path for `src` folder
         url = context.url = srcPrefix + url;
     }

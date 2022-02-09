@@ -1,6 +1,7 @@
 {
   "references": [
     { "path": "worker" },
+    { "path": "service-worker" },
     { "path": "src" },
     { "path": "tools" }
   ],
